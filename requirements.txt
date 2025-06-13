@@ -1,0 +1,8 @@
+opencv-python
+numpy
+pandas
+tensorflow # or pytorch, depending on model
+scikit-learn
+matplotlib
+ultralytics # for YOLOv11
+
