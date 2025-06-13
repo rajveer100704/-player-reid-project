@@ -1,3 +1,4 @@
+ Player Re-Identification in Sports Footage
 
 This project aims to develop a solution for player re-identification in sports footage, addressing both cross-camera player mapping and re-identification in a single feed.
 
@@ -24,32 +25,19 @@ This project aims to develop a solution for player re-identification in sports f
 
 ## Model Download:
 
-Object detection model link: [https://drive.google.com/file/d/1-5fOSHOSB9UXyP_enOoZNAMScrePvCMD/view](https://drive.google.com/file/d/1-5fOSHOSB9UXyP_enOoZNAMScrePvCMD/view)
+Object detection model link:(https://drive.google.com/file/d/1-5fOSHOSB9UXyP_enOoZNAMScrePvCMD/view) (https://drive.google.com/file/d/1-5fOSHOSB9UXyP_enOoZNAMScrePvCMD/view)
 
 Note: The model is a basic fine-tuned version of Ultralytics YOLOv11, trained specifically on players and the ball.
 
-## Submission Requirements:
-
-Submit your work via a GitHub repository or a Google Drive folder, containing:
-
-1. All source code used for the assignment.
-2. A README.md or equivalent documentation clearly explaining:
-    - How to set up and run the code.
-    - Dependencies or environment requirements.
-3. A brief report (PDF or Markdown) covering:
-    - Your approach and methodology.
-    - Techniques you tried and their outcomes.
-    - Challenges encountered.
-    - If incomplete, describe what remains and how you would proceed with more time/resources.
-
-## Evaluation Criteria:
-
-- Accuracy and reliability of player re-identification
-- Simplicity, modularity, and clarity of code
-- Documentation quality
-- Runtime efficiency and latency (bonus points)
-- Thoughtfulness and creativity of your approach
-
-## Additional Notes:
-
 This assignment is designed to reflect real-world computer vision constraints and open-ended problem-solving. A fully working solution is not mandatory. We are equally interested in how you extend this problem.
+
+Depndencies:
+opencv-python
+numpy
+pandas
+tensorflow # or pytorch, depending on model
+scikit-learn
+matplotlib
+ultralytics # for YOLOv11
+
+
