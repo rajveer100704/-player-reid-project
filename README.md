@@ -1,43 +1,61 @@
- Player Re-Identification in Sports Footage
+📌 Overview
 
-This project aims to develop a solution for player re-identification in sports footage, addressing both cross-camera player mapping and re-identification in a single feed.
+     This project implements a Player Re-Identification (ReID) system that combines YOLOv8-based detection with embedding-based similarity matching to track and re-identify       players across video frames and camera feeds.
+     It demonstrates how AI and computer vision can solve challenges in sports analytics, surveillance, and multi-camera tracking, while also serving as a base for further        AI experimentation.
 
-## Task Options:
+🚀 Features
 
-### Option 1: Cross-Camera Player Mapping
+    🎯 YOLOv8-based player detection
+    🔑 Feature embeddings for ReID
+    🔄 Cross-camera identity matching
+    📊 Single & multi-feed support
+    🛠️ Modular and extensible codebase
+    
+🏗️ Tech Stack
 
-**Objective:** Given two clips (broadcast.mp4 and tacticam.mp4) of the same gameplay from different camera angles, map the players such that each player retains a consistent ID across both feeds.
+    Python 3.10+
+    PyTorch – deep learning backend
+    YOLOv8 – object detection
+    OpenCV – image/video processing
+    NumPy, Pandas – data handling 
 
-**Instructions:**
-- Use the provided object detection model to detect players in both videos.
-- Match each player from the tacticam video to their corresponding identity in the broadcast video using consistent player_id values.
-- You may use any combination of visual, spatial, or temporal features to establish the mapping.
+⚙️ Installation
+           
+    Clone the repository:
+     git clone https://github.com/rajveer100704/-player-reid-project.git
+     cd player-reid-project
+     
+    Set up environment:
+     python -m venv venv
+     source venv/bin/activate  # On Windows: venv\Scripts\activate
+     pip install -r requirements.txt
 
-### Option 2: Re-Identification in a Single Feed
+▶️ Usage
 
-**Objective:** Given a 15-second video (15sec_input_720p.mp4), identify each player and ensure that players who go out of frame and reappear are assigned the same identity as before.
+    Run detection on a video:
+     python src/detection.py --input data/match1.mp4 --output results/
 
-**Instructions:**
-- Use the provided object detection model to detect players throughout the clip.
-- Assign player IDs based on the initial few seconds.
-- Maintain the same ID for players when they re-enter the frame later in the video (e.g., near the goal event).
-- Your solution should simulate real-time re-identification and player tracking.
+    Run cross-camera ReID:
+     python src/tracking.py --input1 data/cam1.mp4 --input2 data/cam2.mp4 --output results/
 
-## Model Download:
+🔬 Applications   
+      
+    1.Sports Analytics: Track players across multiple cameras
+    2.Surveillance: Person ReID across CCTV feeds
+    3.Forensics: Aid investigations using video evidence
 
-Object detection model link:(https://drive.google.com/file/d/1-5fOSHOSB9UXyP_enOoZNAMScrePvCMD/view) (https://drive.google.com/file/d/1-5fOSHOSB9UXyP_enOoZNAMScrePvCMD/view)
+ 📈 Extensions & Research
 
-Note: The model is a basic fine-tuned version of Ultralytics YOLOv11, trained specifically on players and the ball.
+    1.Graph-based retrieval & hybrid RAG for multimodal search
+    2.Multi-agent orchestration for automated video analysis
+    3.Embedding optimization with SOTA ReID models
+    4.Real-time API deployment
+    5.Observability & evaluation tools for ReID pipelines  
+👨‍💻 Author
 
-This assignment is designed to reflect real-world computer vision constraints and open-ended problem-solving. A fully working solution is not mandatory. We are equally interested in how you extend this problem.
+    Rajveer Singh Saggu
+    AI/ML Engineer | Open-Source Contributor
+    GitHub: [rajveer100704 ](https://github.com/rajveer100704)
 
-Depndencies:
-opencv-python
-numpy
-pandas
-tensorflow # or pytorch, depending on model
-scikit-learn
-matplotlib
-ultralytics # for YOLOv11
-
+✨ This project demonstrates my ability to design end-to-end AI systems, experiment with modern deep learning methods, and extend them into production-ready solutions.
 
